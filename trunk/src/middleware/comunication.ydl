@@ -1,0 +1,61 @@
+import ConfigurazioniAuto_Mid;
+package Comunication is
+
+	type Tempo_Settore is
+		Id_Auto : Integer;
+		Id_Settore : Integer;
+		Tempo : Float;
+		Giro: Integer;
+	end Tempo_Settore;
+
+	type Stato_Iniziale is
+		Nome_Pista: String;
+		Numero_Giri: Integer;
+		Numero_Settori: Integer;
+		Numero_Auto_Tot: Integer;
+		Meteo: Integer;
+		Checkpoint: String;
+	end Stato_Iniziale;
+
+	type Dati_Concorrente is
+		Id_Auto : Integer;
+		Nome : String;
+		Scuderia: String;
+	end Dati_Concorrente;
+
+	type Dati_Meteo is
+		Meteo : Integer;
+	end Dati_Meteo;
+
+	type Dati_Fine_Gara is
+		Id_Auto : Integer;
+	end Dati_Fine_Gara;
+
+	type Dati_Inizio_Gara is
+		Xml_Data : String;
+	end Dati_Inizio_Gara;
+
+	type Dati_Errore is
+		Messaggio: String;
+	end Dati_Errore;
+
+	interface Comunication_Interface is
+		oneway message Hello;
+		oneway message Comunica_Tempo(Dati_In : in Tempo_Settore);
+		oneway message Comunica_Tempo_Futuro(Dati_In : in Tempo_Settore);
+		oneway message Comunica_Stato_Auto(Dati_In : in ConfigurazioniAuto_Mid.Configurazione);
+		oneway message Comunica_Stato_Iniziale(Dati_In: in Stato_Iniziale);
+		oneway message Comunica_Dati_Concorrente(Dati_In: in Dati_Concorrente);
+		oneway message Comunica_Cambio_Meteo(Dati_In: in Dati_Meteo);
+		oneway message Comunica_Fine_Gara(Dati_In: in Dati_Fine_Gara);
+		oneway message Comunica_Errori(Dati_In: in Dati_Errore);
+	end Comunication_Interface;
+
+	interface Command_Interface is
+		oneway message Hello;
+		oneway message Comunica_Aggiornamenti(Dati_In: in ConfigurazioniAuto_Mid.Configurazione_Auto_Box);
+		oneway message Comunica_Dati_Iniziali(Dati_In: in Dati_Inizio_Gara);
+		oneway message Avvio;
+		oneway message Termina_Comunicazioni;
+	end Command_Interface;
+end Comunication;

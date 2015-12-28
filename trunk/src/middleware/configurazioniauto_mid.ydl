@@ -1,0 +1,47 @@
+
+package ConfigurazioniAuto_Mid is
+
+
+   -- Gomme utilizzabili dalle auto
+   -- type Gomma is 
+   --	(Morbide, Medie, Dure, Rain);
+   -- end Gomma;
+
+   -- Elementi che caratterizzano lo stato di un'auto
+   type Configurazione is
+      Id_Auto: Integer; -- Id dell'auto
+      Gomme : String; -- Tipo di gomme montate
+      Usura_Gomme : Float; -- Livello di usura gomme
+
+      Gomme_Pitstop : String; -- Tipo di gomme da montare al prossimo pitstop
+      Usura_Gomme_Stop : Float; -- Livello di usura oltre il quale effettuare una sostituzione
+
+      Livello_Benzina : Integer; -- Livello di benzina nel serbatoio
+      Livello_Benzina_Stop : Integer; -- Livello sotto il quale occorre effettuare il rifornimento
+      Livello_Benzina_Pitstop : Integer; -- Livello fino al quale rifornire al prossimo pitstop
+
+      Livello_Danni : Integer; -- Numero che rappresenta il livello dei danni subiti
+
+      Entrata_Box : Boolean; -- Indica se l'auto ha pianificato uno stop
+
+      Potenza : Integer; -- Rappresenta la potenza dell'auto
+      Bravura_Pilota : Integer; -- Rappresenta l'infallibilità del pilota
+
+      Nome_Scuderia : String;
+      Nome_Pilota : String;
+
+   end Configurazione;
+
+   type Configurazione_Auto_Box is
+      Id_Auto: Integer; -- Id dell'auto
+      Gomme_Pitstop : String; -- Tipo di gomme da montare al prossimo pitstop
+      Usura_Gomme_Stop : Integer; -- Livello di usura oltre il quale effettuare una sostituzione
+
+      Livello_Benzina_Stop : Integer; -- Livello sotto il quale occorre effettuare il rifornimento
+      Livello_Benzina_Pitstop : Integer; -- Livello fino al quale rifornire al prossimo pitstop
+
+      Entrata_Box : Boolean; -- Indica se l'auto ha pianificato uno stop
+
+   end Configurazione_Auto_Box;
+
+end ConfigurazioniAuto_Mid;

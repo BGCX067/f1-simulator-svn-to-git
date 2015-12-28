@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" class="no-js">
+<head>
+    <title>Monitor</title>
+
+	<!-- Include js/css -->                
+	@@INCLUDE@@ ./css/default.css
+	@@INCLUDE@@ ./css/multilevelmenu.css
+	@@INCLUDE@@ ./css/component.css
+	@@INCLUDE@@ ./css/animations.css
+	@@INCLUDE@@ ./js/modernizr.custom.js
+	@@INCLUDE@@ ./css/style.css
+	@@INCLUDE@@ ./css/global.css
+
+	@@INCLUDE@@ ./js/jquery-1.3.2.js
+	
+	<script type="text/javascript">
+	
+	function apriPannello(id_pannello,idPilota)
+ 	{
+		//aggiornaValoriPannello
+		stampaStatistichePilota(idPilota);
+ 		var nome_pannello_da_aprire = ".panel"+id_pannello;
+ 		$(nome_pannello_da_aprire).toggle("fast");
+		$(this).toggleClass("active");
+		return false;
+ 	}
+	</script>		
+
+    @@INCLUDE@@ ./js/jquery.min.js
+    @@INCLUDE@@ ./js/monitor.js
+    @@INCLUDE@@ ./js/common.js
+    @@INCLUDE@@ ./js/99.js          
+    @@INCLUDE@@ ./js/111.js
+        
+</head>
+
+<body onload="javascript:start()">
+
+
+	<div id="pt-main" class="pt-perspective">
+		
+		<!-- Pagina 1 -->
+		<div class="pt-page pt-page-2" style="background:white; height:1000px; z-index:100000;">		
+			<h1><span>SCD</span><strong>Monitor</strong> F1</h1>
+			<div class="pt-triggers">
+				<button class="pt-touch-button iterateEffects" style="font-size:30px;">Segui la gara</button>
+				<img src="f1_logo.jpg" style="max-width:300px; margin-top:50px; border:0px;margin-left: 150px;padding: 0px;background: white;">			
+			</div>
+		</div>
+		<!-- FINE Pagina 1 -->		
+			
+		<!-- Pagina 2 -->
+		<div class="pt-page pt-page-2" id="pagina_2" style="background:white;">
+		
+			<!-- Container -->
+			<div id="container" style="margin-top:200px; padding-top:0px;">
+				<h1 style="margin-top:0px; padding-top:0px; top:20px;"><span>Statistiche</span><strong>Monitor</strong> F1</h1>
+				
+				<!-- Content -->
+				<div class="content" style="margin-left:200px;"> <!-- Content -->
+
+					<div id="inizio" > <!--  Riga inziale -->
+						<p>
+							Monitor per la visualizzazione della gara, attualmente non sono ancora state inviate informazioni, quindi non e' possibile vedere nulla.
+					  	</p>
+					</div> <!--  Fine Riga inziale -->
+    
+    			
+    			<!-- Info complete -->
+					<span id="info_complete" style="visibility:hidden"> <!-- Inizio info complete -->
+						<h3>
+						<br />
+						<fieldset style="width:1000px;">
+						<legend>Informazioni sulla gara</legend>
+						BENVENUTI ALLA PISTA DI <b><span id="nome_pista"></span></b>. Attualmente il meteo e': <b><span id="info_meteo"></span></b>,  
+						&nbsp;i piloti attualmente in gara sono: <b><span id="num_piloti"></span></b>. <br>	Il numero di giri che dovranno percorrere sono: <b><span id="num_giri"></span></b>. <br />Il tempo percorso dall'inizio della gara e' di: <b><span id="tempo_gara"> </span> secondi. </b> </h3>
+						</fieldset>
+				  </span> 
+			  	<!-- FINE Info complete -->
+					<span id="griglia" style="visibility:hidden;"></span>
+					<div id="tableSmart" style="visibility:visible;"> <!-- Table smart -->
+					
+					<fieldset id="fieldset_griglia" style="position:absolute;">
+					<legend>Griglia dei Piloti</legend>
+						<table id="example1_table" class="table" border=0 width="1000px" >
+						<thead>
+							<tr>
+								<th><span class="bold" align=center >Posizione</span></th>
+								  <th><span class="bold" align=center >Id</span></th>
+								  <th><span class="bold" align=center >Nome pilota</span></th>
+								  <th><span class="bold" align=center >Box</span></th>
+								  <th><span class="bold" align=center >Giro</span></th>
+								  <th><span class="bold" align=center >Settore</span></th>
+								  <th><span class="bold" align=center >Gap</span></th>
+								  <th style="text-align:left ; padding-left:40px; " id="tempovspercentuale" ><span class="bold" align=center >Completamento del settore</span></th>                        
+							</tr>
+						</thead>
+						<tbody>
+								  <tr id="riga_1">
+								          <td id="posizione1" align=center ></td>
+								          <td id="id1" align=center ></td>                      
+								          <td id="nome1bis" align=center >
+								          	<a href="#" class="nome_pilota" onclick="apriPannello(1,1);" id="nome1"></a>
+								          </td>
+								          <td id="box1" align=center ></td>
+								          <td id="giro1" align=center ></td>
+								          <td id="settore1" align=center ></td>
+								          <td id="gap1" align=center ></td>
+								          <td id="tempo1" style="text-align:left ; padding-left:100px;" ></td>
+								  </tr>
+								  <tr id="riga_2">
+								          <td id="posizione2" align=center ></td>
+								          <td id="id2" align=center ></td>                      
+								          <td id="nome2bis" align=center >
+								          	<a href="#" class="nome_pilota" onclick="apriPannello(1,2);" id="nome2"></a>
+								          </td>
+								          <td id="box2" align=center ></td>
+								          <td id="giro2" align=center ></td>
+								          <td id="settore2" align=center ></td>
+								          <td id="gap2" align=center ></td>
+								          <td id="tempo2" style="text-align:left ; padding-left:100px;" ></td>                        
+
+								  </tr>
+								  <tr id="riga_3">
+								          <td id="posizione3" align=center ></td>
+								          <td id="id3" align=center ></td>                                      
+								          <td id="nome3bis" align=center >
+								          	<a href="#" class="nome_pilota" onclick="apriPannello(1,3);" id="nome3"></a></td>
+								          <td id="box3" align=center ></td>
+								          <td id="giro3" align=center ></td>
+								          <td id="settore3" align=center ></td>
+								          <td id="gap3" align=center ></td>
+								          <td id="tempo3" style="text-align:left ; padding-left:100px;" ></td>                          
+								  </tr>
+								  <tr id="riga_4">
+								          <td id="posizione4" align=center ></td>
+								          <td id="id4" align=center ></td>                                      
+								          <td id="nome4bis" align=center >
+								          	<a href="#" class="nome_pilota" onclick="apriPannello(1,4);" id="nome4"></a></td>
+								           <td id="box4" align=center ></td>
+								          <td id="giro4" align=center ></td>
+								          <td id="settore4" align=center ></td>
+								          <td id="gap4" align=center ></td>
+								          <td id="tempo4" style="text-align:left ; padding-left:100px;" ></td>                          
+								  </tr>
+								  <tr id="riga_5">
+								          <td id="posizione5" align=center ></td>
+								          <td id="id5" align=center ></td>                                      
+								          <td id="nome5bis" align=center >
+								          	<a href="#" class="nome_pilota" onclick="apriPannello(1,5);" id="nome5"></a></td>
+								          	<td id="box5" align=center ></td>
+								          <td id="giro5" align=center ></td>
+								          <td id="settore5" align=center ></td>
+								          <td id="gap5" align=center ></td>
+								          <td id="tempo5" style="text-align:left ; padding-left:100px;" ></td>  
+
+								  </tr>
+								  <tr id="riga_6"">
+								          <td id="posizione6" align=center ></td>
+								          <td id="id6" align=center ></td>                                      
+								          <td id="nome6bis" align=center >
+								          	<a href="#" class="nome_pilota" onclick="apriPannello(1,6);" id="nome6"></a></td>
+								           <td id="box6" align=center ></td>
+								          <td id="giro6" align=center ></td>
+								          <td id="settore6" align=center ></td>
+								          <td id="gap6" align=center ></td>
+								          <td id="tempo6" style="text-align:left ; padding-left:100px;" ></td>  
+								  </tr>	
+								  <tr id="riga_7"">
+								          <td id="posizione7" align=center ></td>
+								          <td id="id7" align=center ></td>                                      
+								          <td id="nome7bis" align=center >
+								          	<a href="#" class="nome_pilota" onclick="apriPannello(1,7);" id="nome7"></a></td>
+								          	 <td id="box7" align=center ></td>
+								          <td id="giro7" align=center ></td>
+								          <td id="settore7" align=center ></td>
+								          <td id="gap7" align=center ></td>
+								          <td id="tempo7" style="text-align:left ; padding-left:100px;" ></td>  
+								  </tr>
+								  <tr id="riga_8">
+								          <td id="posizione8" align=center ></td>
+								          <td id="id8" align=center ></td>                                      
+								          <td id="nome8bis" align=center >
+								          	<a href="#" class="nome_pilota" onclick="apriPannello(1,8);" id="nome8"></a></td>
+								          	 <td id="box8" align=center ></td>
+								          <td id="giro8" align=center ></td>
+								          <td id="settore8" align=center ></td>
+								          <td id="gap8" align=center ></td>
+								          <td id="tempo8" style="text-align:left ; padding-left:100px;" ></td>  
+								  </tr>
+								  
+								  <tr id="riga_9">
+								          <td id="posizione9" align=center ></td>
+								          <td id="id9" align=center ></td>                                      
+								          <td id="nome9bis" align=center >
+								          	<a href="#" class="nome_pilota" onclick="apriPannello(1,9);" id="nome9"></a></td>
+								          	 <td id="box9" align=center ></td>
+								          <td id="giro9" align=center ></td>
+								          <td id="settore9" align=center ></td>
+								          <td id="gap9" align=center ></td>
+								          <td id="tempo9" style="text-align:left ; padding-left:100px;" ></td>  
+								  </tr>
+								  
+								  <tr id="riga_10">
+								          <td id="posizione10" align=center ></td>
+								          <td id="id10" align=center ></td>                                      
+								          <td id="nome10bis" align=center >
+								          	<a href="#" class="nome_pilota" onclick="apriPannello(1,10);" id="nome10"></a></td>
+								          	 <td id="box10" align=center ></td>
+								          <td id="giro10" align=center ></td>
+								          <td id="settore10" align=center ></td>
+								          <td id="gap10" align=center ></td>
+								          <td id="tempo10" style="text-align:left ; padding-left:100px;" ></td>  
+								  </tr>								  								  	
+
+								  								  								  								  
+							  								  							  
+							</tbody>
+						</table>
+						</fieldset>
+					<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    			<h2 id="fine_gara"></h2>
+					</div> <!-- Fine Table smart -->
+															
+				</div>
+				<!-- FINE Content -->
+				
+			</div>
+			<!-- FINE Container -->
+				
+			<div class="panel1 pannello">
+				<a href="#" class="nome_pilota" onclick="apriPannello(1,1);" id="nome1">Chiudi pannello</a>
+				<h3>TimeLine</h3>
+              <p id=infoPilota></p>
+      				<p id="pannello"></p>	
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+		<!-- FINE Pagina 2 -->	
+						
+	</div>
+
+	<div class="pt-message">
+		<p>Your browser does not support CSS animations.</p>
+	</div>
+		
+
+	@@INCLUDE@@ ./js/jquery.dlmenu.js
+	@@INCLUDE@@ ./js/pagetransitions_1.js
+
+<br />
+<br />
+
+<br />
+
+</body>
+</html>
+  </body>
+</html>
+
+

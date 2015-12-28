@@ -1,0 +1,110 @@
+<style>
+/* ============= general ============= */
+
+.scriptDemo { margin: 20px 0; border-top: solid transparent #f9f9f9; }
+	.scriptDemo form {}
+		.scriptDemo label { float: left; width: 180px; display: block; font-weight: bold; font-weight: 13px; color: #666; }
+		.scriptDemo form.shorterLabels label { width: 90px; }
+		.scriptDemo label.larger { width: 250px; }
+		.scriptDemo input { float: left; }
+		.scriptDemo .date {
+			float: left; background: url('../imgs/furniture/date.png'); width: 18px; height: 18px; margin: 2px 0 0 6px;
+		}
+		.scriptDemo button { float: none; }
+		.scriptDemo .fieldsGroup * { float: left; }
+		.scriptDemo .fieldsGroup input { margin-right: 15px; }
+	  .scriptDemo .table { border-collapse: collapse; text-align: center;}
+		.scriptDemo .table tbody tr td { text-align: center; } 
+		.scriptDemo .table thead tr th { background: #fff; border: solid 1px #ccc; padding: 6px 8px; color: #444; text-align: center;}
+		.scriptDemo .table thead tr th { background: #ccc; color: #444; text-align: center; }
+		.scriptDemo ul { background: #f5f5f5; width: 200px; border-collapse: collapse; border: solid 1px #ccc; margin: 0; }
+		.scriptDemo ul li { list-style: none; border-bottom: solid 1px #ccc; padding: 4px 8px; color: #666; }
+
+
+/* ============= specific ============= */
+
+
+/* Blockster */
+
+.featureRotator { width: 400px; height: 240px; position: relative; border: solid 1px #aaa; margin: 0 auto; }
+	.featureRotator div { position: absolute; width: 400px; height: 240px; background-repeat: no-repeat; }
+	.fr_slide1 { background: url('../imgs/scriptDemos/blockster/slide1.jpg'); }
+	.fr_slide2 { background: url('../imgs/scriptDemos/blockster/slide2.jpg'); }
+	.fr_slide3 { background: url('../imgs/scriptDemos/blockster/slide3.jpg'); }
+		.featureRotator div div { height: 84px; bottom: 0; }
+			.featureRotator div div a { font-weight: bold; font-style: italic; font-size: 13px; color: #2085bd; }
+			.featureRotator div div h5 { color: #333; margin-top: 8px !important; text-indent: 20px; }
+			.featureRotator div div p { color: #333; margin-top: 5px; font-size: 13px; margin-left: 20px; width: 80%; }
+			.fr_slide1 div h5, .fr_slide1 div p { color: #fff !important; }
+			.fr_slide3 div p { width: 60% !important; }
+
+
+/* slidey puzzle */
+
+#puzzle_holder {
+	width: 252px;
+	height: 251px;
+	border: solid 4px #26a1ce;
+	border-radius: 10px;
+	moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	background: #333;
+	box-shadow: 0 0 12px #000;
+	margin-bottom: 60px;
+}
+	#puzzle_holder button { height: 24px !important; }
+
+
+/* bouncy text */
+#bounceTest, #bounceTest * { font-size: 30px; color: #759537; }
+		#bounceTest span * { color: #d00; }
+
+
+/* dropdowns */
+
+.dropdown {
+	font-family: "Trebuchet MS";
+	font-size: 13px;
+	font-weight: bold;
+	padding: 3px 0 3px 5px;
+	margin:0 18px 0 0;
+	border: solid 2px #26a1ce;
+	border-radius: 8px;
+	background: url('../imgs/scriptDemos/dropdown/downArrow.png') no-repeat right center #e4f0c6;
+	width: 182px;
+	float: left;
+	cursor: pointer;
+	position: relative;
+	box-shadow: -2px 2px 6px #888;
+}
+.dropdown.hover {  }
+
+.dropdown .selectedOption { color: #555; }
+.dropdown .selectedOption span { display: none; }
+
+.dropdown .ulsWrapper {
+	border: solid 2px #26a1ce;
+	padding: 6px 0 5px 0;
+	background: #f4f4f4;
+	z-index: 1000;
+	position: absolute;
+	width: 100%;
+	margin-left: -2px;
+	border-radius: 8px;
+	box-shadow: -2px 2px 6px #888;
+	top: 22px;
+}
+.dropdown ul { float: left; margin: -2px 0 0 0 !important; border: none; clear: none; height: auto; padding: 0; }
+
+.dropdown ul li { padding: 0; border: none; background: transparent; list-style: none; }
+.dropdown li:hover { background: #ddd; }
+.dropdown img { float: left; width: 30px; margin: 3px 7px; }
+.dropdown ul div { clear: both; width: 100%; height: 1px; }
+.dropdown a { padding: 2px 0 2px 6px; text-decoration: none; font-size: 13px; display: block; font-size: 13px; color: #555; }
+.dropdown li:hover a { text-decoration: underline; }
+.dropdown a.disabled { color: #999; }
+
+
+/* numberfy (197) */
+#numberfyDemo { background: #eaeaea; width: 400px; height: 300px; border: none; font-size: 14px; font-family: "courier new"; color: #b00; }
+</style>

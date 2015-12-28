@@ -1,0 +1,19 @@
+-- Specificare il percorso del file xmlada.gpr
+--with "/usr/local/lib/gnat/xmlada.gpr";
+--with "../../../workspace/lib/gnat/xmlada.gpr";
+
+with "../yami4-gpl-1.7.0/src/ada/yami.gpr";
+
+with "./src/middleware/middleware.gpr";
+
+project F1 is
+
+   for Source_Dirs use ("src");
+   for Main use ("main");
+   for Object_Dir use "obj";
+
+   package Builder is
+      for Executable ("main") use "gara";
+   end Builder;
+end F1;
+

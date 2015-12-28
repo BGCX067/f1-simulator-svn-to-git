@@ -1,0 +1,9 @@
+import configurazioniauto;
+
+
+package Box is
+
+	interface Box_Interface is
+		message aggiornastato(datiin : in configurazioniauto.configurazione; datiout : out configurazioniauto.configurazione);
+	end Box_Interface;
+end Box;

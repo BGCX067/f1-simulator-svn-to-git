@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+
+
+<circuit name="Imola" laps="5" weather="1">
+
+<sectors>
+
+<sector type="first" checkpoint="false"><lane length="200" grip="2" max_speed="300" max_exit_speed="80"/><lane length="200" grip="2"  max_speed="300" max_exit_speed="80"/></sector>
+
+<sector type="normal" checkpoint="false"><lane length="100" grip="2"  max_speed="300" max_exit_speed="80" /><lane length="102" grip="1"  max_speed="300" max_exit_speed="80" /></sector>
+
+<sector type="normal" checkpoint="true"><lane length="250" grip="2"  max_speed="300" max_exit_speed="80" /><lane length="251" grip="2"  max_speed="300" max_exit_speed="80" /></sector>
+
+<sector type="normal" checkpoint="false"><lane length="130" grip="2"  max_speed="300" max_exit_speed="80" /><lane length="131" grip="2"  max_speed="300" max_exit_speed="80" /></sector>
+
+<sector type="normal" checkpoint="false"><lane length="150" grip="2"  max_speed="300" max_exit_speed="80" /><lane length="151" grip="2"  max_speed="300" max_exit_speed="80" /></sector>
+
+
+<sector type="second_last" checkpoint="false"><lane length="189" grip="2" max_speed="300" max_exit_speed="80" /><lane length="190" grip="2"  max_speed="300" max_exit_speed="80"  /><lane length="91" grip="2"  max_speed="300" max_exit_speed="80" /></sector>
+
+<sector type="last" checkpoint="true"><lane length="160" grip="2"  max_speed="300" max_exit_speed="80" /><lane length="161" grip="2"  max_speed="300" max_exit_speed="80" /></sector>
+
+<pitlane length="160" /><lane length="160" grip="2"  max_speed="300" max_exit_speed="80" /></sectors>
+
+
+	<cars>
+		<car team="Ferrari" pilot="Alonso" power="80" gasoline="50" gasoline_stop="30" gasoline_at_pitstop="80" tyres="medium" tyres_stop="80"/>
+		<car team="RedBull" pilot="Vettel" power="70" gasoline="25" gasoline_stop="30"  gasoline_at_pitstop="80" tyres="hard" tyres_stop="80" />
+		<car team="McLaren" pilot="Raikonnen" power="89" gasoline="70" gasoline_stop="30"  gasoline_at_pitstop="80" tyres="soft" tyres_stop="80" />
+		<car team="Ferrari" pilot="Massa" power="0" gasoline="70"  gasoline_stop="30" gasoline_at_pitstop="80"  tyres="medium" tyres_stop="80" />
+		<car team="Triumph" pilot="Gonel" power="100" gasoline="150"  gasoline_stop="20" gasoline_at_pitstop="150" tyres="soft" tyres_stop="80" />
+		<car team="Triumph" pilot="Diego" power="100" gasoline="150"  gasoline_stop="20" gasoline_at_pitstop="150" tyres="soft" tyres_stop="80" />
+		<car team="Triumph" pilot="Dario" power="100" gasoline="150"  gasoline_stop="20" gasoline_at_pitstop="150" tyres="soft" tyres_stop="80" />
+	</cars>
+</circuit>

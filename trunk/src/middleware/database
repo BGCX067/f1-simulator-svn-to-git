@@ -1,0 +1,5 @@
+| TABLE   | tempi            | tempo       || Tabella tempi auto           |
+| giro    | INTEGER          | PK          || numero del giro              |
+| settore | INTEGER          | PK          || id settore                   |
+| auto    | INTEGER          | PK          || id auto                      | 
+| tempo   | DOUBLE PRECISION | NOT NULL    || tempo da inizio gara         | 

@@ -1,0 +1,16 @@
+[Comunicazione]
+#composto da protocollo :// ip : porta del middleware esempio: tcp://127.0.0.1:12345
+midserver=tcp://127.0.0.1:12345
+
+#composto da protocollo :// ip : porta del coordinatore esempio: tcp://127.0.0.1:12344
+coorserv=tcp://127.0.0.1:12344
+
+#Indirizzo ip del webserver esempio: 127.0.0.1
+webserverHost=127.0.0.1
+
+#Porta del webserver esempio: 8080
+webserverPort=8080
+
+[Generale]
+#Indica il tempo in secondi dell'avanzamento della gara
+tempoframe=2

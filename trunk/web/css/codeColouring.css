@@ -1,0 +1,29 @@
+<style>
+/* general, preparatory */
+
+div.code {
+	background: url(../imgs/furniture/codeBack.gif) no-repeat right top #f4f4f4;
+	border: solid 1px #ccc;
+	padding: 8px 20px 8px 60px;
+	margin: 20px 0;
+	position: relative;
+}
+
+    div.code * { font-family: Courier New; font-size: 14px; }
+    div.code p { margin: 0; line-height: 18px !important; text-align: left !important; }
+    .lineNum { width: 40px; padding-left: 10px; display: block; float: left; left: 0; position: absolute; color: #777; }
+    .lineNum_bgThing { position: absolute; left: 0; top: 0; width: 50px; border-right: solid 1px #fbb; background: #e4f0c6; height: 10px; }
+
+
+/* speicif code elements */
+.code_func, .fctn * { color: #00c; }
+.code_comment, .code_comment * { color: #ea3 !important; }
+.code_number { color: #097; }
+.code_string, .code_string * { color: #083 !important; }
+.code_phpvar, .code_phpvar * { color: #500 !important; }
+.code_indent:before { content: "!"; }
+.code_word { color: #800; }
+.code_forceNormal { color: #000 !important; }
+.code_default { color: #000; }
+
+</style>

@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" class="no-js">
+<head>
+    <title>Box</title>
+
+	<!-- Include js/css -->                
+	@@INCLUDE@@ ./css/default.css
+	@@INCLUDE@@ ./css/multilevelmenu.css
+	@@INCLUDE@@ ./css/component.css
+	@@INCLUDE@@ ./css/animations.css
+	@@INCLUDE@@ ./js/modernizr.custom.js
+	@@INCLUDE@@ ./css/global.css 
+	
+    @@INCLUDE@@ ./js/box.js
+    @@INCLUDE@@ ./js/jquery.min.js
+
+<!-- css e script per lo slider -->
+	@@INCLUDE@@ ./css/jquery-ui.css
+	@@INCLUDE@@ ./js/jquery-1.9.1.js
+	@@INCLUDE@@ ./js/jquery-ui.js
+	@@INCLUDE@@ ./js/sliders.js
+<!-- css e script per lo slider -->
+    
+	@@INCLUDE@@ ./css/form.css 
+ 
+</head>
+
+<body onload="javascript:start()">
+
+	<div id="pt-main" class="pt-perspective">
+		
+		<!-- Pagina 1 -->
+		<div class="pt-page pt-page-2" style="background:white;height: 600px;">		
+			<h1><span>SCD</span><strong>Box</strong> F1</h1>
+
+			
+
+				<!-- Content -->
+				<div class="content" style="margin-top:200px;">
+	  				   
+	  				<!-- Table smart -->
+					<div id="tableSmart" style="visibility:hidden">
+					
+						<table id="example1_table" class="table" border=0 width="700px" style="margin:auto;" >
+						<thead>
+							<tr>
+								  <th><span class="bold" align=center >Id</span></th>
+								  <th><span class="bold" align=center >Nome pilota</span></th>                       
+							</tr>
+						</thead>						
+						<tbody>
+								  <tr id="trid1">
+								          <td id="id1" align=center ></td>                      
+								          <td id="nome1bis" align=center >
+								          	<a href="#" class="nome_pilota iterateEffects" onclick="doSend(1);" id="nome1"></a>
+								          </td>
+								          <td>      
+								          <input type="button" class="iterateEffects" value="Scegli pilota" onclick="doSend(1);"></td>
+								  </tr>
+								  <tr id="trid2">
+								          <td id="id2" align=center ></td>                      
+								          <td id="nome2bis" align=center >
+								          	<a href="#" class="nome_pilota iterateEffects" onclick="doSend(2);" id="nome2"></a>
+								          </td>
+								          <td><input type="button" class="iterateEffects" value="Scegli pilota" onclick="doSend(2);"></td>                     
+
+								  </tr>
+								  <tr id="trid3">
+								          <td id="id3" align=center ></td>                                      
+								          <td id="nome3bis" align=center >
+								          	<a href="#" class="nome_pilota iterateEffects" onclick="doSend(3);" id="nome3"></a></td>
+							          	<td><input type="button" class="iterateEffects" value="Scegli pilota" onclick="doSend(3);"></td>                    
+								  </tr>
+								  <tr id="trid4">								          
+								  		<td id="id4" align=center ></td>                                      
+								          <td id="nome4bis" align=center >
+								          	<a href="#" class="nome_pilota iterateEffects" onclick="doSend(4);" id="nome4"></a></td>                         
+								          	<td><input class="iterateEffects" type="button" value="Scegli pilota" onclick="doSend(4);"></td>
+								  </tr>
+								  <tr id="trid5">
+								          <td id="id5" align=center ></td>                                      
+								          <td id="nome5bis" align=center >
+								          	<a href="#" class="nome_pilota iterateEffects" onclick="doSend(5);" id="nome5"></a></td>
+								          	<td><input class="iterateEffects" type="button" value="Scegli pilota" onclick="doSend(5);"></td>
+								  </tr>
+								  <tr id="trid6">
+								          <td id="id6" align=center ></td>                                      
+								          <td id="nome6bis" align=center >
+								          	<a href="#" class="nome_pilota iterateEffects" onclick="doSend(6);" id="nome6"></a></td>
+								          	<td><input class="iterateEffects" type="button" value="Scegli pilota" onclick="doSend(6);"></td>
+								  </tr>
+								  <tr id="trid7">
+								          <td id="id7" align=center ></td>                                      
+								          <td id="nome7bis" align=center >
+								          	<a href="#" class="nome_pilota iterateEffects" onclick="doSend(7);" id="nome7"></a></td>
+								          	<td><input class="iterateEffects" type="button" value="Scegli pilota" onclick="doSend(7);"></td>
+								  </tr>
+								  <tr id="trid8">
+								          <td id="id8" align=center ></td>                                      
+								          <td id="nome8bis" align=center >
+								          	<a href="#" class="nome_pilota iterateEffects" onclick="doSend(8);" id="nome8"></a></td>
+								          	<td><input class="iterateEffects" type="button" value="Scegli pilota" onclick="doSend(8);"></td>
+								  </tr>								  								  								  
+							</tbody>
+						</table>
+					</div> <!-- Fine Table smart -->
+					Risposta: <p id="resp"></p>
+				</div>
+				<!-- FINE Content -->			
+		</div>
+		<!-- FINE Pagina 1 -->		
+			
+		<!-- Pagina 2 -->
+		<div class="pt-page pt-page-2" style="background:white;" id="pagina_2">
+		
+			<!-- Container -->
+			<div id="container" style="margin-top:130px;">
+				<h1 style="margin-top:0px; padding-top:0px; top:20px;"><span>Gestione</span><strong>Box</strong> F1</h1>
+				
+				<!-- Content -->
+				<div class="content" style="margin:auto; padding-top:0px;">
+
+					<div id="inizio" style="height:450px;">
+						
+						<h3>Box per la gestione di un pilota.</h3>
+												
+							<div style="width:100%;">
+								<div style="float:left; width:50%;">
+									<!-- Pilota -->
+									<fieldset>
+										<legend>Pilota</legend>	
+										
+										<label for="auto">Id auto:</label>
+										<input type="text" id="auto" style="border: 0; color: #f6931f; font-weight: bold;pointer-events:none;" />
+										<br/>
+																					
+										<label for="nomepilota">Pilota:</label>
+										<input type="text" id="nomepilota" style="border: 0; color: #f6931f; font-weight: bold;pointer-events:none;" />																																																																																											
+										<br/>
+														
+										<label for="nomescuderia">Scuderia:</label>
+										<input type="text" id="nomescuderia" style="border: 0; color: #f6931f; font-weight: bold;pointer-events:none;" />	
+										<br/>
+								
+										<label for="bravurapilota">Bravura pilota:</label>
+										<input type="text" id="bravurapilota" style="border: 0; color: #f6931f; font-weight: bold;pointer-events:none;" />
+										<br/>
+														
+										<label for="potenza">Potenza:</label>
+										<input type="text" id="potenza" style="border: 0; color: #f6931f; font-weight: bold;pointer-events:none;" />
+										<br/>
+							
+									</fieldset>
+									<!-- FINE Pilota -->			
+							
+									<!-- Monitoraggio auto -->						
+									<fieldset>
+										<legend>Monitoraggio auto</legend>
+								
+										<label for="gomme">Gomme in uso:</label>
+										<input type="text" id="gomme" style="border: 0; color: #f6931f; font-weight: bold;pointer-events:none;" />
+										<br/>
+							
+										<label for="usuragomme">Usura gomme:</label>
+										<input type="text" id="usuragomme" style="border: 0; color: #f6931f; font-weight: bold;pointer-events:none;" />	
+										<div id="slider-usuragomme" style="pointer-events:none;"></div>										
+										<br/>
+							
+										<label for="gommepitstop">Gomme da mettere al pit stop:</label>
+										<input type="text" id="gommepitstop" style="border: 0; color: #f6931f; font-weight: bold;pointer-events:none;" />	
+										<br/>	
+							
+										<label for="usuragommestop">Livello di usura gomme per il pit stop:</label>
+										<input type="text" id="usuragommestop" style="border: 0; color: #f6931f; font-weight: bold;pointer-events:none;" />
+										<br/>		
+						
+										<label for="livellobenzina">Livello benzina:</label>
+										<input type="text" id="livellobenzina" style="border: 0; color: #f6931f; font-weight: bold;pointer-events:none;" />
+										<div id="slider-livellobenzina" style="pointer-events:none;"></div>										
+										<br/>
+							
+										<label for="livellobenzinastop">Carburante da rifornire al pit stop:</label>
+										<input type="text" id="livellobenzinastop" style="border: 0; color: #f6931f; font-weight: bold;pointer-events:none;" />								
+										<br/>	
+											
+										<label for="livellobenzinapitstop">Livello benzina per il rientro ai box:</label>
+										<input type="text" id="livellobenzinapitstop" style="border: 0; color: #f6931f; font-weight: bold;pointer-events:none;" />							
+										<br/>
+									
+										<label for="livellodanni">Livello danni:</label>
+										<input type="text" id="livellodanni" style="border: 0; color: #f6931f; font-weight: bold;pointer-events:none;" />
+										<br/>	
+																	
+										<label for="entratabox">Ordine di entrata box:</label>
+										<input type="text" id="entratabox" style="border: 0; color: #f6931f; font-weight: bold;pointer-events:none;" />							
+										<br/>
+																																										
+									</fieldset>
+									<!-- FINE Monitoraggio auto -->
+								</div>
+							
+								<div style="float:left; width:50%;">
+									<!-- Ordini box -->						
+									<fieldset>
+										<legend>Ordini dal box</legend>	
+														
+										<label for="gommepitstop_set">Setta gomme per il prossimo pit stop:</label>
+										  <select  id="gommepitstop_set" style="border: 0; color: #f6931f; font-weight: bold;" >
+										   <option value="SOFT" selected="selected">SOFT</option>
+										   <option value="MEDIUM">MEDIUM</option>
+										   <option value="HARD">HARD</option>
+										   <option value="RAIN">RAIN</option>
+										  </select>  					
+										<br/><br/>
+							
+										<label for="usuragommestop_set">Setta livello usura gomme stop:</label>
+										<input type="text" id="usuragommestop_set" style="border: 0; color: #f6931f; font-weight: bold;pointer-events:none;" />
+										<div id="slider-usuragommestop"></div>
+										<br/>
+								
+										<label for="livellobenzinastop_set">Setta livello benzina stop:</label>
+										<input type="text" id="livellobenzinastop_set" style="border: 0; color: #f6931f; font-weight: bold;pointer-events:none;" />														
+										<div id="slider-livellobenzinastop"></div>
+										<br/>
+										
+										<label for="livellobenzinapitstop_set">Setta livello benzina pit stop:</label>
+										<input type="text" id="livellobenzinapitstop_set" style="border: 0; color: #f6931f; font-weight: bold;pointer-events:none;" />														
+										<div id="slider-livellobenzinapitstop"></div>
+										<br/>
+									
+										<input type="checkbox" name="entratabox_set" id="entratabox_set" checked/>Ordine di rientrare ai box appena possibile
+										<br/><br/>
+																													
+										<input class="send_settingFromBox" type="button" value="Invia strategia" onclick="doSendSettingFromBox();">
+															
+									</fieldset>
+									<!-- FINE Ordini box -->
+								
+								</div>						
+					  		</div>
+					  
+					  		<div style="margin-top:450px;">
+								<!-- Timeline box -->						
+								<fieldset>
+									<legend>Tempi per settore</legend>
+									<div id="timelinePilota"></div>
+								</fieldset>
+								<div id="fine_gara"></div>								
+								<!-- FINE Timeline box -->				  		
+					  		</div>					  		
+
+					</div>
+    														
+				</div>
+				<!-- FINE Content -->
+				
+			</div>
+			<!-- FINE Container -->
+		
+		</div>
+		<!-- FINE Pagina 2 -->	
+						
+	</div>
+
+	<div class="pt-message">
+		<p>Your browser does not support CSS animations.</p>
+	</div>
+		
+
+	@@INCLUDE@@ ./js/jquery.dlmenu.js
+	@@INCLUDE@@ ./js/pagetransitions.js
+</body>
+</html>
+
+
+
+
